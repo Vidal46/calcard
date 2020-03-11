@@ -1,0 +1,113 @@
+{
+  "project_info": {
+    "project_number": "826711071783",
+    "firebase_url": "https://calcard-app.firebaseio.com",
+    "project_id": "calcard-app",
+    "storage_bucket": "calcard-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826711071783:android:ae6bcf79c985e58b",
+        "android_client_info": {
+          "package_name": "br.com.calcard.android.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "826711071783-k234pgsq8qq8b4bnoe27ir49aola1r12.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.calcard.android.app",
+            "certificate_hash": "b32f9a339955664a2d703c3aa857f1f90f2cd629"
+          }
+        },
+        {
+          "client_id": "826711071783-6emqq8t766i20dr0s110toit1c8b06cq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbxcpN0fI22hRpf1F2ZmvNFLUVFj7KobA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "826711071783-6emqq8t766i20dr0s110toit1c8b06cq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "826711071783-9q0cqd624jjp7r5smo471r24t1ct1sgf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.calcard.ios.app"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826711071783:android:e97af4d7b6e07a12",
+        "android_client_info": {
+          "package_name": "br.com.calcard.android.app.develop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "826711071783-ls8e23lu6a48me98r78qu7pfs1dtbchh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.calcard.android.app.develop",
+            "certificate_hash": "b32f9a339955664a2d703c3aa857f1f90f2cd629"
+          }
+        },
+        {
+          "client_id": "826711071783-6emqq8t766i20dr0s110toit1c8b06cq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbxcpN0fI22hRpf1F2ZmvNFLUVFj7KobA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "826711071783-6emqq8t766i20dr0s110toit1c8b06cq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "826711071783-9q0cqd624jjp7r5smo471r24t1ct1sgf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.calcard.ios.app"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

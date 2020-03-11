@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ouze.SmsMigrationFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/sms_code_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/digite_sms_title"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/vias_sms_code_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sms_code_text">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/first_visa_sms_code_input"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/brn_border_lilas"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/vias_sms_code_layout">
+
+                <EditText
+                    android:id="@+id/first_visa_sms_code_cell"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@null"
+                    android:backgroundTint="@color/colorAccent"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/white"
+                    android:textSize="24sp"
+                    tools:text="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/second_visa_sms_code_input"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/brn_border_lilas"
+                app:layout_constraintStart_toEndOf="@id/first_visa_sms_code_input"
+                app:layout_constraintTop_toTopOf="@+id/vias_sms_code_layout">
+
+                <EditText
+                    android:id="@+id/second_visa_sms_code_cell"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@null"
+                    android:backgroundTint="@color/colorAccent"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/white"
+                    android:textSize="24sp"
+                    tools:text="4" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/third_visa_sms_code_input"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/brn_border_lilas"
+                android:theme="@style/TextLabel"
+                app:layout_constraintStart_toEndOf="@id/second_visa_sms_code_input"
+                app:layout_constraintTop_toTopOf="@+id/vias_sms_code_layout">
+
+                <EditText
+                    android:id="@+id/third_visa_sms_code_cell"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@null"
+                    android:backgroundTint="@color/colorAccent"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/white"
+                    android:textSize="24sp"
+                    tools:text="7" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fourth_visa_sms_code_input"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/brn_border_lilas"
+                android:theme="@style/TextLabel"
+                app:layout_constraintStart_toEndOf="@id/third_visa_sms_code_input"
+                app:layout_constraintTop_toTopOf="@+id/vias_sms_code_layout">
+
+                <EditText
+                    android:id="@+id/fourth_visa_sms_code_cell"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@null"
+                    android:backgroundTint="@color/colorAccent"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/white"
+                    android:textSize="24sp"
+                    tools:text="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fifth_visa_sms_code_input"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/brn_border_lilas"
+                android:theme="@style/TextLabel"
+                app:layout_constraintStart_toEndOf="@id/fourth_visa_sms_code_input"
+                app:layout_constraintTop_toTopOf="@+id/vias_sms_code_layout">
+
+                <EditText
+                    android:id="@+id/fifth_visa_sms_code_cell"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@null"
+                    android:backgroundTint="@color/colorAccent"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/white"
+                    android:textSize="24sp"
+                    tools:text="0" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/sms_code_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/nao_recebi_sms_link"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vias_sms_code_layout" />
+
+        <ImageView
+            android:id="@+id/sms_code_image_check"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/ic_check"
+            android:textColor="@android:color/white"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/vias_sms_code_layout"
+            app:layout_constraintStart_toEndOf="@+id/vias_sms_code_layout"
+            app:layout_constraintTop_toTopOf="@+id/vias_sms_code_layout" />
+
+        <ImageView
+            android:id="@+id/sms_code_image_fail"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/main_redirection_fail_ic"
+            android:textColor="@android:color/white"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/vias_sms_code_layout"
+            app:layout_constraintStart_toEndOf="@+id/vias_sms_code_layout"
+            app:layout_constraintTop_toTopOf="@+id/vias_sms_code_layout" />
+
+        <ProgressBar
+            android:id="@+id/sms_code_progress"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/vias_sms_code_layout"
+            app:layout_constraintStart_toEndOf="@+id/vias_sms_code_layout"
+            app:layout_constraintTop_toTopOf="@+id/vias_sms_code_layout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

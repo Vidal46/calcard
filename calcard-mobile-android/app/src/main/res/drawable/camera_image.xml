@@ -1,0 +1,53 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:viewportWidth="126"
+    android:viewportHeight="103.267"
+    android:width="126dp"
+    android:height="103.267dp">
+    <group
+        android:translateX="1"
+        android:translateY="1">
+        <group
+            android:translateY="-5.5">
+            <path
+                android:pathData="M114.082 26.167H96.466L88.2 5.5H35.8L27.534 26.167H24.8V15.833H12.4V26.167H9.918A9.927 9.927 0 0 0 0 36.085V96.778a10 10 0 0 0 9.988 9.988H114.012A10 10 0 0 0 124 96.778V36.085A9.927 9.927 0 0 0 114.082 26.167Zm-97.549 -6.2h4.133v6.2H16.533ZM119.867 96.778a5.86 5.86 0 0 1 -5.855 5.855H9.988a5.862 5.862 0 0 1 -5.855 -5.855V36.085A5.792 5.792 0 0 1 9.918 30.3H30.332L38.6 9.633H85.4L93.668 30.3h20.415a5.792 5.792 0 0 1 5.785 5.785V96.778Z"
+                android:fillColor="@color/colorAccent"
+                android:strokeColor="@color/colorAccent"
+                android:strokeWidth="2"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round" />
+        </group>
+        <group
+            android:translateX="12.8"
+            android:translateY="4.1">
+            <path
+                android:pathData="M49.2 14.5A37.2 37.2 0 1 0 86.4 51.7 37.243 37.243 0 0 0 49.2 14.5Zm0 70.267A33.067 33.067 0 1 1 82.267 51.7 33.105 33.105 0 0 1 49.2 84.767Z"
+                android:fillColor="@color/colorAccent"
+                android:strokeColor="@color/colorAccent"
+                android:strokeWidth="2"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round" />
+        </group>
+        <group
+            android:translateX="19.2"
+            android:translateY="10.5">
+            <path
+                android:pathData="M42.8 20.5A24.8 24.8 0 1 0 67.6 45.3 24.828 24.828 0 0 0 42.8 20.5Zm0 45.467A20.667 20.667 0 1 1 63.467 45.3 20.69 20.69 0 0 1 42.8 65.967Z"
+                android:fillColor="@color/colorAccent"
+                android:strokeColor="@color/colorAccent"
+                android:strokeWidth="2"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round" />
+        </group>
+        <group
+            android:translateX="51.2"
+            android:translateY="9.433">
+            <path
+                android:pathData="M56.267 19.5a8.267 8.267 0 1 0 8.267 8.267A8.275 8.275 0 0 0 56.267 19.5Zm0 12.4A4.133 4.133 0 1 1 60.4 27.767 4.137 4.137 0 0 1 56.267 31.9Z"
+                android:fillColor="@color/colorAccent"
+                android:strokeColor="@color/colorAccent"
+                android:strokeWidth="2"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round" />
+        </group>
+    </group>
+</vector>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="br.com.calcard.android.app">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity
+            android:name=".ui.visa.ConfirmIdentityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ouze.TimeLineActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.smsverification.OuzeSmsConfirmationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.invoice.InvoiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ouze_insurance.HomeInsuranceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.onboard.OnboardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.insurance.CancelInsuranceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.insurance.VehicleFormActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.insurance.HiringInsuranceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.insurance.MyInsurancesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.insurance.InsuranceDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.insurance.CardPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.insurance.SuccessfulHiringActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.insurance.AddingBeneficiaryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.insurance.AvailableInsuranceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.redirection.RegistrationMiddleWareActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.redirection.ErrorHandlerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.redirection.MainRedirectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.visa.CameraActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.visa.OpsHandlerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.visa.PasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.visa.LimitRefusementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.visa.ThirdStepPhotoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.visa.WellVerifyMigrationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.visa.SmsCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.visa.ApprovedCreditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.visa.FirstStepPhotoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.temporarylock.TemporaryBlockActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".ui.travel_notification.SuccessTravelNotificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.travel_notification.ConfirmTravelNotification"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.travel_notification.ChooseCountryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.travel_notification.TravelNotificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.limitrequest.LimitRequestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.secure.SecureListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.smsverification.SmsConfirmation"
+            android:screenOrientation="portrait" />
+        <!--
+ Set custom default icon. This is used when no icon is set for incoming notification messages.
+ See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/icon_notification" />
+        <!--
+             Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" /> <!-- [START fcm_default_channel] -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" /> <!-- [END fcm_default_channel] -->
+        <service android:name=".firebase.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".firebase.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".ui.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.visa.PhoneNumberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.login.LoginRedirectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.visa.OuzePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.register.CpfregisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.register.InputDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.register.OuzeRegisterPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.cards.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.cards.ProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.cards.ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.changepasswordcard.ChangePasswordCard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.goals.GoalsActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".utils.LogoutService"
+            android:exported="false" />
+    </application>
+
+</manifest>

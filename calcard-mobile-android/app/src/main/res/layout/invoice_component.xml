@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/invoice_component_icon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_supermercado" />
+
+    <TextView
+        android:id="@+id/invoice_component_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppins"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/invoice_component_icon"
+        app:layout_constraintTop_toTopOf="@id/invoice_component_icon"
+        tools:text="Uber Br" />
+
+    <TextView
+        android:id="@+id/invoice_component_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/poppins"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/invoice_component_title"
+        app:layout_constraintTop_toBottomOf="@id/invoice_component_title"
+        tools:text="R$ 16,98" />
+
+    <TextView
+        android:id="@+id/invoice_component_parcela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/invoice_component_text"
+        app:layout_constraintStart_toEndOf="@id/invoice_component_text"
+        tools:text="1/10" />
+
+    <TextView
+        android:id="@+id/invoice_component_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppins"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/invoice_component_title"
+        tools:text="17:58" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

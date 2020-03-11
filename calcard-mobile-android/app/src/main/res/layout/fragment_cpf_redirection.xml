@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ouze_bottom_sheet_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_shape"
+    android:fillViewport="false"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/ouze_bottom_sheet_main_redirection_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/insira_seu_cpf_text"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ouze_bottom_sheet_main_redirection_input"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/brn_border_lilas"
+            android:elevation="1dp"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ouze_bottom_sheet_main_redirection_text">
+
+            <EditText
+                android:id="@+id/ouze_bottom_sheet_main_redirection_input_value"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:ellipsize="start"
+                android:inputType="number"
+                android:gravity="center_horizontal|center_vertical"
+                android:maxLength="14"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/ouze_bottom_sheet_main_redirection_error_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/cpf_invalido_label"
+            android:textAlignment="center"
+            android:textColor="@color/error_border"
+            android:textSize="17sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ouze_bottom_sheet_main_redirection_input" />
+
+        <ProgressBar
+            android:id="@+id/ouze_bottom_sheet_main_redirection_progress_ic"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/ouze_bottom_sheet_main_redirection_input"
+            app:layout_constraintEnd_toEndOf="@+id/ouze_bottom_sheet_main_redirection_input"
+            app:layout_constraintTop_toTopOf="@id/ouze_bottom_sheet_main_redirection_input" />
+
+        <ImageView
+            android:id="@+id/ouze_bottom_sheet_main_redirection_image_check"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/ic_check"
+            android:textColor="@android:color/white"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/ouze_bottom_sheet_main_redirection_input"
+            app:layout_constraintEnd_toEndOf="@+id/ouze_bottom_sheet_main_redirection_input"
+            app:layout_constraintTop_toTopOf="@id/ouze_bottom_sheet_main_redirection_input" />
+
+        <ImageView
+            android:id="@+id/ouze_bottom_sheet_main_redirection_image_fail"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/main_redirection_fail_ic"
+            android:textColor="@android:color/white"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/ouze_bottom_sheet_main_redirection_input"
+            app:layout_constraintEnd_toEndOf="@+id/ouze_bottom_sheet_main_redirection_input"
+            app:layout_constraintTop_toTopOf="@id/ouze_bottom_sheet_main_redirection_input" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

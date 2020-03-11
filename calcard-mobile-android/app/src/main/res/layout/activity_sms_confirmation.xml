@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="br.com.calcard.android.app.ui.visa.VisaMigrationViewModel" />
+
+        <variable
+            name="activity"
+            type="br.com.calcard.android.app.ui.smsverification.OuzeSmsConfirmationActivity" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.smsverification.OuzeSmsConfirmationActivity">
+
+        <ImageView
+            android:id="@+id/main_redirection_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ouze_logo" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ouze_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_shape"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/oze_sms_register_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="@string/digite_sms_title"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="19sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/oze_sms_register_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/oze_sms_register_text">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/first_oze_sms_register_input"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/brn_border_lilas"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/oze_sms_register_layout">
+
+                        <EditText
+                            android:id="@+id/first_oze_sms_register_cell"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:background="@null"
+                            android:backgroundTint="@color/colorAccent"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:singleLine="true"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/white"
+                            android:textSize="24sp"
+                            tools:text="3" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/second_oze_sms_register_input"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/brn_border_lilas"
+                        app:layout_constraintStart_toEndOf="@id/first_oze_sms_register_input"
+                        app:layout_constraintTop_toTopOf="@+id/oze_sms_register_layout">
+
+                        <EditText
+                            android:id="@+id/second_oze_sms_register_cell"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:background="@null"
+                            android:backgroundTint="@color/colorAccent"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:singleLine="true"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/white"
+                            android:textSize="24sp"
+                            tools:text="4" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/third_oze_sms_register_input"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/brn_border_lilas"
+                        app:layout_constraintStart_toEndOf="@id/second_oze_sms_register_input"
+                        app:layout_constraintTop_toTopOf="@+id/oze_sms_register_layout">
+
+                        <EditText
+                            android:id="@+id/third_oze_sms_register_cell"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:background="@null"
+                            android:backgroundTint="@color/colorAccent"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:singleLine="true"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/white"
+                            android:textSize="24sp"
+                            tools:text="7" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/fourth_oze_sms_register_input"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/brn_border_lilas"
+                        app:layout_constraintStart_toEndOf="@id/third_oze_sms_register_input"
+                        app:layout_constraintTop_toTopOf="@+id/oze_sms_register_layout">
+
+                        <EditText
+                            android:id="@+id/fourth_oze_sms_register_cell"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:background="@null"
+                            android:backgroundTint="@color/colorAccent"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:singleLine="true"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/white"
+                            android:textSize="24sp"
+                            tools:text="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/fifth_oze_sms_register_input"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/brn_border_lilas"
+                        app:layout_constraintStart_toEndOf="@id/fourth_oze_sms_register_input"
+                        app:layout_constraintTop_toTopOf="@+id/oze_sms_register_layout">
+
+                        <EditText
+                            android:id="@+id/fifth_oze_sms_register_cell"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:background="@null"
+                            android:backgroundTint="@color/colorAccent"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:singleLine="true"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/white"
+                            android:textSize="24sp"
+                            tools:text="0" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/oze_sms_register_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="@string/nao_recebi_sms_link"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/oze_sms_register_layout" />
+
+                <ImageView
+                    android:id="@+id/oze_sms_register_check"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/ic_check"
+                    android:textColor="@android:color/white"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/oze_sms_register_layout"
+                    app:layout_constraintStart_toEndOf="@+id/oze_sms_register_layout"
+                    app:layout_constraintTop_toTopOf="@+id/oze_sms_register_layout" />
+
+                <ImageView
+                    android:id="@+id/oze_sms_register_fail"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/main_redirection_fail_ic"
+                    android:textColor="@android:color/white"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/oze_sms_register_layout"
+                    app:layout_constraintStart_toEndOf="@+id/oze_sms_register_layout"
+                    app:layout_constraintTop_toTopOf="@+id/oze_sms_register_layout" />
+
+                <ProgressBar
+                    android:id="@+id/oze_sms_register_progress"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/oze_sms_register_layout"
+                    app:layout_constraintStart_toEndOf="@+id/oze_sms_register_layout"
+                    app:layout_constraintTop_toTopOf="@+id/oze_sms_register_layout" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

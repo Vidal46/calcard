@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.insurance.HiringInsuranceActivity">
+
+    <LinearLayout
+        android:id="@+id/hiring_insurance_linear"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@drawable/gradient_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/contratacao_title"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="23sp" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/hiring_insurance_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hiring_insurance_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/voce_esta_contratando_o_text"
+        android:textAlignment="center"
+        android:textColor="#A9A0C5"
+        android:textSize="19sp"
+        app:layout_constraintTop_toBottomOf="@+id/hiring_insurance_linear" />
+
+    <TextView
+        android:id="@+id/hiring_insurance_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:textAlignment="center"
+        android:textColor="#A9A0C5"
+        android:textSize="19sp"
+        app:layout_constraintTop_toBottomOf="@+id/hiring_insurance_title"
+        tools:text="Seguro de Vida" />
+
+    <TextView
+        android:id="@+id/hiring_insurance_value_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/voc_paga_por_mes"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hiring_insurance_first_view" />
+
+    <TextView
+        android:id="@+id/hiring_insurance_value_text_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/hiring_insurance_value_text"
+        app:layout_constraintStart_toEndOf="@+id/hiring_insurance_value_text"
+        tools:text="R$25,50" />
+
+    <ImageView
+        android:id="@+id/hiring_insurance_first_view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hiring_insurance_text" />
+
+    <ImageView
+        android:id="@+id/hiring_insurance_second_view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hiring_insurance_value_text_value" />
+
+    <TextView
+        android:id="@+id/hiring_insurance_value_text_beneficio_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/benef_cios"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/hiring_insurance_second_view" />
+
+    <LinearLayout
+        android:id="@+id/hiring_insurance_recycler_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="13dp"
+        app:layout_constraintBottom_toTopOf="@id/hiring_insurance_link"
+        app:layout_constraintTop_toBottomOf="@+id/hiring_insurance_value_text_beneficio_text">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/hiring_insurance_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/hiring_insurance_value_text_beneficio_text"
+            tools:itemCount="1"
+            tools:listitem="@layout/hiring_insurance_list_item" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/hiring_insurance_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:text="@string/baixar_contrato_link"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/hiring_insurance_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/hiring_insurance_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:background="@drawable/btn_squared_orange"
+        android:text="@string/avancar_label"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
